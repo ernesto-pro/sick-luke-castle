@@ -1,0 +1,949 @@
+import { withBase } from './lib/base'
+
+export const SOCIALS = [
+  {
+    key: 'instagram',
+    label: 'Instagram',
+    handle: '@sicklukex2',
+    url: 'https://www.instagram.com/sicklukex2',
+  },
+  {
+    key: 'tiktok',
+    label: 'TikTok',
+    handle: '@sicklukex2000',
+    url: 'https://www.tiktok.com/@sicklukex2000',
+  },
+  {
+    key: 'spotify',
+    label: 'Spotify',
+    handle: 'Sick Luke',
+    url: 'https://open.spotify.com/artist/0hk4xVujcyOr6USD95wcWb',
+  },
+  {
+    key: 'youtube',
+    label: 'YouTube',
+    handle: 'Sick Luke',
+    url: 'https://www.youtube.com/channel/UCQloxfKGGx5G1fRLB21PKZw',
+  },
+  {
+    key: 'apple',
+    label: 'Apple Music',
+    handle: 'Sick Luke',
+    url: 'https://music.apple.com/it/artist/sick-luke/605255710',
+  },
+  {
+    key: 'soundcloud',
+    label: 'SoundCloud',
+    handle: 'sickluke',
+    url: 'https://soundcloud.com/sickluke',
+  },
+  {
+    key: 'wikipedia',
+    label: 'Wikipedia',
+    handle: 'Sick Luke',
+    url: 'https://it.wikipedia.org/wiki/Sick_Luke',
+  },
+]
+
+export const NAV = [
+  { id: 'conte', index: '01' },
+  { id: 'opere', index: '02' },
+  { id: 'ascolto', index: '03' },
+  { id: 'corte', index: '04' },
+  { id: 'farfastrelli', index: '05' },
+  { id: 'visioni', index: '06' },
+  { id: 'invito', index: '07' },
+]
+
+export const ALBUM_FILTERS = ['all', 'album', 'ep', 'collab', 'ost']
+
+export const ALBUMS = [
+  {
+    id: 'shaytan',
+    title: 'SHAYTAN',
+    artist: 'Melons & Sick Luke',
+    year: '2026',
+    date: '13.02.2026',
+    type: 'ep',
+    tags: ['Trap', 'Hip-Hop'],
+    cover: withBase('/img/shaytan.webp'),
+    isNew: true,
+    spotify: 'https://open.spotify.com/album/65uNhuH5g94ZAXysiJzUZq',
+    apple: 'https://music.apple.com/it/album/shaytan/1874223641',
+    tracks: [
+      'INTRO',
+      'VOLDEMORT',
+      'MARTELLARE',
+      'PAZZO OMICIDA',
+      'NIENTE PACE (feat. Niko Pandetta & IvanBi)',
+      "CASE DELL'ORRORE",
+      'NUVOLE ROSSE (feat. LILCR)',
+    ],
+  },
+  {
+    id: 'dopamina',
+    title: 'DOPAMINA',
+    artist: 'Sick Luke',
+    year: '2025',
+    date: '05.09.2025',
+    type: 'album',
+    tags: ['Trap', 'Hip-Hop', 'Pop Rap'],
+    cert: 'Oro',
+    cover: withBase('/img/dopamina.webp'),
+    spotify: 'https://open.spotify.com/album/3y7OMRVgLI9cMJ1C5q82cD',
+    apple: 'https://music.apple.com/it/album/dopamina/1827485269',
+    tracks: [
+      'OGNI SBAGLIO (feat. BLANCO & Simba La Rue)',
+      'MONEY MACHINE (feat. Lazza & Tony Effe)',
+      'KEANU REEVES (feat. Tedua)',
+      'DA QUANDO CI SEI TU (feat. Alfa)',
+      'PICCOLA (feat. Piccolo & thasup)',
+      'MAYDAY (feat. Capo Plaza)',
+      'TESTA O CROCE (feat. Sayf)',
+      'NON IN VENDITA (feat. nayt & Rose Villain)',
+      'LE DONNE (feat. Tony Effe)',
+      'SU E GIÙ (feat. Piccolo & Clams Casino)',
+      'AIR (feat. Venerus & Ele A)',
+      'AMAMI X CHI SONO (feat. Glocky & Side Baby)',
+      "FATHER'S DAY (feat. Duke Montana)",
+    ],
+  },
+  {
+    id: 'x2deluxe',
+    title: 'X2 DELUXE',
+    artist: 'Sick Luke',
+    year: '2022',
+    date: '02.12.2022',
+    type: 'album',
+    tags: ['Trap', 'Hip-Hop', 'Pop'],
+    cert: '3× Platino',
+    cover: withBase('/img/x2deluxe.webp'),
+    spotify: 'https://open.spotify.com/album/5AfejwZ6MABGyj1BJF5wC6',
+    apple: 'https://music.apple.com/it/album/x2-deluxe/1658109710',
+    bonus: 6,
+    tracks: [
+      'OCCHI COLTELLO (feat. Gemitaiz, Giorgio Poi, Lil Kvneki & Massimo Pericolo)',
+      'AUDI (feat. Rhove & Capo Plaza)',
+      'DOMANI TI CHIAMO (feat. Tananai & bnkr44)',
+      'NELLA CASA DI DIO (feat. Tony Effe, Paky & J Lord)',
+      'VUOTO DENTRO (feat. Mara Sattei & Bresh)',
+      'MARY POPPIN (feat. Thelonious B., Zyrtck, Radical & Side Baby)',
+      'NOTTE SCURA (feat. Gazzelle & Tedua)',
+      'CREATUR (feat. Geolier & Ernia)',
+      'IL GIORNO PIÙ TRISTE DEL MONDO (feat. Ariete & Mecna)',
+      'SOLITE PARE (feat. thasup & Sfera Ebbasta)',
+      'FALENA (feat. Franco126, Coez & Ketama126)',
+      'DREAM TEAM (feat. Pyrex, Capo Plaza, Tedua & Shiva)',
+      'HENTAI (feat. Ghali & Tony Effe)',
+      'LA STREGA DEL FRUTTETO (feat. Chiello & Madame)',
+      'CLOCHARD (feat. Taxi B & Pyrex)',
+      'SOGNI MATTI (feat. Leon Faun & Drast)',
+      'FACCIO COSE (feat. Jake La Furia, Fabri Fibra & Izi)',
+      'MOSAICI (feat. Gaia & Carl Brave)',
+      'TEMPORALE (feat. Ketama126, Izi & Luchè)',
+      'FUNERAL PARTY (feat. Cosmo & Pop X)',
+      'PEZZI DA 20 (feat. Emis Killa & Side Baby)',
+      'CAMEL E MALINCONIA (feat. Psicologi & CoCo)',
+      'LIBERTÀ (feat. Duke Montana)',
+    ],
+  },
+  {
+    id: 'x2',
+    title: 'X2',
+    artist: 'Sick Luke',
+    year: '2022',
+    date: '07.01.2022',
+    type: 'album',
+    tags: ['Trap', 'Hip-Hop', 'Pop'],
+    cert: '3× Platino',
+    cover: withBase('/img/x2.webp'),
+    spotify: 'https://open.spotify.com/album/6ZVOpNfX2JMfAFDqEfmyQ5',
+    apple: 'https://music.apple.com/it/album/x2/1598545064',
+    tracks: [
+      'Notte scura (feat. Gazzelle & Tedua)',
+      'Creatur (feat. Geolier & Ernia)',
+      'Il giorno più triste del mondo (feat. Ariete & Mecna)',
+      'Solite pare (feat. thasup & Sfera Ebbasta)',
+      'Falena (feat. Franco126, Coez & Ketama126)',
+      'Dream Team (feat. Pyrex, Capo Plaza, Tedua & Shiva)',
+      'Hentai (feat. Ghali & Tony Effe)',
+      'La strega del frutteto (feat. Chiello & Madame)',
+      'Clochard (feat. Taxi B & Pyrex)',
+      'Sogni matti (feat. Leon Faun & Drast)',
+      'Faccio cose (feat. Jake La Furia, Fabri Fibra & Izi)',
+      'Mosaici (feat. Gaia & Carl Brave)',
+      'Temporale (feat. Ketama126, Izi & Luchè)',
+      'Funeral Party (feat. Cosmo & Pop X)',
+      'Pezzi da 20 (feat. Emis Killa & Side Baby)',
+      'Camel e malinconia (feat. Psicologi & CoCo)',
+      'Libertà (feat. Duke Montana)',
+    ],
+  },
+  {
+    id: 'atlantide',
+    title: 'ATLANTIDE',
+    artist: 'Sick Luke, Lorenzo Senni & Francesco Fantini',
+    year: '2021',
+    date: '2021',
+    type: 'ost',
+    tags: ['Trap', 'Elettronica', 'Colonna sonora'],
+    cover: withBase('/img/atlantide.webp'),
+    spotify: 'https://open.spotify.com/search/Atlantide%20Original%20Soundtrack%20Sick%20Luke',
+    apple: 'https://music.apple.com/it/search?term=Atlantide%20Original%20Soundtrack%20Sick%20Luke',
+    tracks: [
+      'Intro',
+      'San Francesco',
+      'Barchini',
+      'Non credere nei sogni',
+      'Rigel',
+      'Venice OST',
+      'Fuga finanza',
+      'Granchio fuma',
+      'Arrivo a Venezia',
+      'Ciao Maila',
+      'Ho smesso di fare sogni',
+      'Bianka Theme',
+      'Polaris',
+      'Luke piano',
+      'Yuri techno',
+      'Venezia discoteca',
+      'LM Atlantide',
+      'Adhara',
+      'Vivere (feat. Flavio De Luca)',
+    ],
+  },
+  {
+    id: 'neverland',
+    title: 'NEVERLAND',
+    artist: 'Mecna & Sick Luke',
+    year: '2019',
+    date: '11.10.2019',
+    type: 'album',
+    tags: ['Hip-Hop', 'R&B'],
+    cert: 'Oro',
+    cover: withBase('/img/neverland.webp'),
+    spotify: 'https://open.spotify.com/album/6dgoz9DGFVg97vGr0260sP',
+    apple: 'https://music.apple.com/it/album/neverland/1481068563',
+    tracks: [
+      'Fuori dalla città',
+      'Neverland (feat. Marina, PSICOLOGI, Voodoo Kid & AINÉ)',
+      'Si baciano tutti (feat. CoCo)',
+      'Se apro gli occhi',
+      'Akureyri',
+      'Perdo la testa',
+      'Non dormo mai (feat. Luchè, Tedua & Generic Animal)',
+      'Canzone in lacrime',
+      'Pazzo di te',
+      ':(',
+    ],
+  },
+  {
+    id: 'cambiatutto',
+    title: 'CAMBIA TUTTO',
+    artist: 'Sick Luke & Canesecco',
+    year: '2015',
+    date: '04.09.2015',
+    type: 'collab',
+    tags: ['Hip-Hop', 'Rap'],
+    cover: withBase('/img/cambiatutto.webp'),
+    spotify: 'https://open.spotify.com/search/CaneSecco%20Sick%20Luke%20Cambia%20Tutto',
+    apple: 'https://music.apple.com/it/search?term=CaneSecco%20Sick%20Luke%20Cambia%20Tutto',
+    tracks: [
+      'Intro/Outro',
+      'Cambia tutto',
+      'Lamborghini',
+      'Folie@2',
+      'Hipster',
+      'Fuck off',
+      'La legge (del più forte)',
+      'Che te credi (feat. Blocco Boyz)',
+      'Le ali (feat. Duke Montana)',
+      'P.S.I. (feat. Clark P)',
+      'Ragazza G.',
+      'Antieroi (feat. Jesto)',
+      'Onestamente (i soldi)',
+      'Sinceramente (chissenefrega)',
+      'Quanto male fa (feat. Duke Montana)',
+      'Lamborghini RMX (feat. Emis Killa)',
+    ],
+  },
+  {
+    id: 'pandemic',
+    title: 'PANDEMIC',
+    artist: 'Sick Six & Sick Luke',
+    year: '2013',
+    date: '02.04.2013',
+    type: 'collab',
+    tags: ['Hip-Hop', 'Rap', 'Boom Bap'],
+    cover: withBase('/img/pandemic.webp'),
+    spotify: 'https://open.spotify.com/search/Sick%20Six%20Pandemic',
+    apple: 'https://music.apple.com/us/album/pandemic/605255546',
+    tracks: [
+      'Intro',
+      'Pandemic',
+      'Die Young',
+      'Run & Hide (feat. Reef The Lost Cauze)',
+      'Empty',
+      'Evacuate',
+      'Switch the Flow',
+      'Losing Sight (feat. Planetary & Doap Nixon)',
+      'Regardless',
+      'Reality Check (feat. Adlib & Brainstorm)',
+      'Devils Breath (feat. Duke Montana & Daniela Romeo)',
+      'Death Goes On',
+      'Torture (feat. Jaysaun & Slaine)',
+      'My Rock (feat. Miss Amy)',
+      'Everybody Lies (feat. Side Effect)',
+      'A Son Is Born',
+      'Roam Town',
+    ],
+  },
+]
+
+/* every song in the catalogue, once, with all of its appearances */
+export const TRACK_INDEX = (() => {
+  const map = new Map()
+  ALBUMS.forEach((album) => {
+    album.tracks.forEach((track, index) => {
+      const key = `${track.toLowerCase().replace(/\s+/g, ' ').trim()}|${album.artist.toLowerCase()}`
+      const appearance = {
+        albumId: album.id,
+        albumTitle: album.title,
+        year: album.year,
+        index: index + 1,
+        deluxe: Boolean(album.bonus),
+        bonus: Boolean(album.bonus && index < album.bonus),
+      }
+      const entry = map.get(key)
+      if (entry) {
+        entry.appearances.push(appearance)
+      } else {
+        map.set(key, { title: track, appearances: [appearance] })
+      }
+    })
+  })
+  return [...map.values()].map((entry) => {
+    const appearances = [...entry.appearances].sort(
+      (a, b) =>
+        Number(a.year) - Number(b.year) ||
+        Number(a.deluxe) - Number(b.deluxe) ||
+        a.index - b.index,
+    )
+    return {
+      ...entry,
+      appearances,
+      album: appearances[0],
+      years: [...new Set(appearances.map((item) => item.year))],
+    }
+  })
+})()
+
+export const trackFeatures = (track) => {
+  const match = track.match(/\(feat\.\s*([^)]+)\)/i)
+  return match ? match[1] : ''
+}
+
+export const trackBase = (track) => track.replace(/\s*\(feat\.[^)]*\)\s*$/i, '').trim()
+
+export const spotifySearchUrl = (query) => `https://open.spotify.com/search/${encodeURIComponent(query)}`
+
+export const CATALOGUE_TOTAL = ALBUMS.reduce((total, album) => total + album.tracks.length, 0)
+
+
+
+export const CREDITS = [
+  {
+    track: 'Solite pare',
+    artists: 'Sfera Ebbasta, thasup',
+    project: 'X2',
+    year: '2022',
+    album: 'x2',
+  },
+  {
+    track: 'Dream Team',
+    artists: 'Pyrex, Capo Plaza, Tedua, Shiva',
+    project: 'X2',
+    year: '2022',
+    album: 'x2',
+  },
+  {
+    track: 'Falena',
+    artists: 'Franco126, Coez, Ketama126',
+    project: 'X2',
+    year: '2022',
+    album: 'x2',
+  },
+  {
+    track: 'MONEY MACHINE',
+    artists: 'Lazza, Tony Effe',
+    project: 'DOPAMINA',
+    year: '2025',
+    album: 'dopamina',
+  },
+  {
+    track: 'OGNI SBAGLIO',
+    artists: 'BLANCO, Simba La Rue',
+    project: 'DOPAMINA',
+    year: '2025',
+    album: 'dopamina',
+  },
+  {
+    track: 'KEANU REEVES',
+    artists: 'Tedua',
+    project: 'DOPAMINA',
+    year: '2025',
+    album: 'dopamina',
+  },
+]
+
+export const COURT = [
+  'Sfera Ebbasta',
+  'Tedua',
+  'Lazza',
+  'Capo Plaza',
+  'Blanco',
+  'Tony Effe',
+  'thasup',
+  'Ghali',
+  'Guè',
+  'Luchè',
+  'Shiva',
+  'Simba La Rue',
+  'Rose Villain',
+  'Duke Montana',
+  'Clams Casino',
+  'Dark Polo Gang',
+  'Side Baby',
+  'Sayf',
+  'Nayt',
+  'Venerus',
+  'Alfa',
+  'Piccolo',
+  'Geolier',
+  'Ernia',
+  'Coez',
+  'Franco126',
+  'Ketama126',
+  'Madame',
+  'Chiello',
+  'Ariete',
+  'Mecna',
+  'Emis Killa',
+  'Fabri Fibra',
+  'Jake La Furia',
+  'Izi',
+  'Pyrex',
+  'Taxi B',
+  'Cosmo',
+  'Pop X',
+  'Gaia',
+  'Carl Brave',
+  'Tananai',
+  'Rhove',
+  'Paky',
+]
+
+export const VIDEO_FILTERS = ['all', 'visual', 'day', 'beat', 'other']
+
+/* official contacts */
+export const BOOKING_EMAIL = 'booking@sickluke.com'
+export const INFO_EMAIL = 'info@sickluke.com'
+
+/* the nights: documented live dates, newest first.
+   sources: official site, artist channels, venue listings and press. */
+export const TOURS = [
+  { date: '2026-08-29', city: 'Ladispoli', area: 'RM', venue: 'Piazza Rossellini', event: 'Live in Piazza', type: 'show' },
+  { date: '2026-07-30', city: 'Corfu', area: 'GR', venue: '54 Dreamy Nights', event: 'Sick Luke + BSMNT', type: 'club' },
+  { date: '2026-07-20', city: "St. Julian's", area: 'MT', venue: 'Tigullio', event: 'Sick Luke Live', type: 'club' },
+  { date: '2026-03-19', city: 'Milano', area: 'MI', venue: 'Fabrique', event: 'Dopamina Experience', type: 'show' },
+  { date: '2025-11-08', city: 'Brescia', area: 'BS', venue: 'Circus Beatclub', event: 'Humble Night', type: 'club' },
+  { date: '2025-10-04', city: 'Roma', area: 'RM', venue: 'Red Bull 64 Bars Live', event: 'Red Bull 64 Bars Live 2025', type: 'special' },
+  { date: '2025-09-04', city: 'Milano', area: 'MI', venue: 'Torre Branca · JustMe', event: 'Dopamina Party — Album Release', type: 'special' },
+  { date: '2025-08-05', city: 'Porto Rotondo', area: 'SS', venue: 'Pineta Porto Rotondo', event: 'Sick Luke DJ Set', type: 'club' },
+  { date: '2025-08-02', city: 'Arbatax', area: 'NU', venue: 'Rocce Rosse', event: 'Arabax Music Festival', type: 'festival' },
+  { date: '2025-07-30', city: 'Gallipoli', area: 'LE', venue: 'Riobo', event: 'Sottosopra Fest', type: 'festival' },
+  { date: '2025-07-25', city: 'Albenga', area: 'SV', venue: 'Essaouira Disco Beach', event: 'Too Much w/ Sick Luke', type: 'club' },
+  { date: '2025-07-15', city: 'Soverato', area: 'CZ', venue: 'Circle Club', event: 'Sick Luke Live', type: 'club' },
+  { date: '2024-12-31', city: 'Roma', area: 'RM', venue: 'Palazzo dello Sport', event: 'Capodanno Da Tony 2024', type: 'special' },
+  { date: '2022-08-07', city: 'Gallipoli', area: 'LE', venue: 'Parco Gondar', event: 'Lazza Tour w/ Chiello', type: 'festival' },
+  { date: '2022-07-30', city: 'Golfo di Patti', area: 'ME', venue: 'Indiegeno Fest', event: 'Indiegeno Fest 2022', type: 'festival' },
+  { date: '2022-07-16', city: "L'Aquila", area: 'AQ', venue: 'Aeroporto dei Parchi', event: 'Pinewood Festival', type: 'festival' },
+  { date: '2022-04-25', city: 'Napoli', area: 'NA', venue: "Mostra d'Oltremare", event: 'Comicon 2022', type: 'festival' },
+  { date: '2019-08-11', city: 'Lecce', area: 'LE', venue: 'Sottosopra Fest', event: 'Sottosopra Fest 2019', type: 'festival' },
+  { date: '2018-11-13', city: 'Roma', area: 'RM', venue: 'Palalottomatica', event: 'Sick Luke w/ Ghali', type: 'show' },
+  { date: '2018-07-17', city: 'Gallipoli', area: 'LE', venue: 'Praja', event: 'Sottosopra Fest Preview', type: 'club' },
+  { date: '2018-06-01', city: 'Portici', area: 'NA', venue: 'Lido Arturo', event: 'Sick Luke @ Lido Arturo', type: 'club' },
+]
+
+export const TOUR_YEARS = [...new Set(TOURS.map((tour) => tour.date.slice(0, 4)))].sort(
+  (a, b) => b.localeCompare(a),
+)
+
+/* clean a YouTube title for the stage, keeping the official wording */
+export const videoTitle = (title) =>
+  title
+    .replace(/^SICK LUKE\s*-\s*/i, '')
+    .replace(/^Sick Luke\s*-\s*/i, '')
+    .replace(/^Day In The Life:\s*/i, '')
+    .replace(/^BEAT BREAKDOWN:\s*/i, '')
+    .replace(/^\d+\.\s*/, '')
+    .replace(/\s*\[(Official Visual|Official Video|Visual Album|Video Lyrics|Lyrics Video)\]\s*$/i, '')
+    .trim()
+
+export const formatViews = (value) => {
+  if (!value) return ''
+  if (value >= 1000000) {
+    const millions = value / 1000000
+    return `${millions >= 10 ? Math.round(millions) : millions.toFixed(1).replace('.0', '')}M`
+  }
+  if (value >= 1000) return `${Math.round(value / 1000)}K`
+  return String(value)
+}
+
+export const TOP_TRACKS = [
+  {
+    id: '3yFgWoossjlaJ919XDCG4C',
+    title: 'MI PIACCIONO LE ARMI',
+    artists: 'Simba La Rue, FT Kings, Sick Luke',
+    duration: 129655,
+    preview: 'https://p.scdn.co/mp3-preview/a2a6b681464951c77e21b7ccc61a7a635de0c9a3',
+  },
+  {
+    id: '4txJR7LWq7AQYNYoBCf0gB',
+    title: 'MONEY MACHINE (feat. Lazza & Tony Effe)',
+    artists: 'Sick Luke, Lazza, Tony Effe',
+    duration: 228570,
+    preview: 'https://p.scdn.co/mp3-preview/a3268ba00e0d29a65a22d0671aae368061e53f8c',
+  },
+  {
+    id: '0PQxC8NHgiKXLK3Zm6QoCj',
+    title: 'SOLITE PARE (feat. tha Supreme & Sfera Ebbasta)',
+    artists: 'Sick Luke, tha Supreme, Sfera Ebbasta',
+    duration: 211660,
+    preview: 'https://p.scdn.co/mp3-preview/0c67eab118450d9635a17343d1055b7913544fd4',
+  },
+  {
+    id: '7b9kVs2a1ljoTqZp6TRezW',
+    title: 'VAMONOS',
+    artists: 'Kidd Keo, Sick Luke',
+    duration: 153878,
+    preview: 'https://p.scdn.co/mp3-preview/fcb0cf0d48ed2bdf910861092ce16da5e1106f1e',
+  },
+  {
+    id: '7Eey0kKPfatUEQeldGmxAj',
+    title: 'MAYDAY (feat. Capo Plaza)',
+    artists: 'Sick Luke, Capo Plaza',
+    duration: 174613,
+    preview: 'https://p.scdn.co/mp3-preview/c8d58f397dc12848238541af3c041641fdae4be9',
+  },
+  {
+    id: '6d9eOuVkzV4XJ8YIWM3Q1k',
+    title: 'PEZZI DA 100 (feat. Kid Yugi)',
+    artists: 'Tony Effe, Kid Yugi, Sick Luke',
+    duration: 159200,
+    preview: 'https://p.scdn.co/mp3-preview/8cf6c981f504a8d905de551db659afefc5e16b1f',
+  },
+  {
+    id: '2fQtrzMUMmnnJ5YxSb55MR',
+    title: 'Lo Sai',
+    artists: 'Tedua, Sick Luke',
+    duration: 201344,
+    preview: 'https://p.scdn.co/mp3-preview/42abb33eed9a892f05a54e983789fe1032ffad84',
+  },
+  {
+    id: '7FAjtmj2btmDvniG0eSJR8',
+    title: 'SUBMARINER',
+    artists: 'Simba La Rue, Sick Luke',
+    duration: 138862,
+    preview: 'https://p.scdn.co/mp3-preview/9c1487f37db4a2c7fed0f59b2260291e878b2d10',
+  },
+  {
+    id: '1FEAEKjVQLZuSeb0omUxep',
+    title: 'FALENA (feat. Franco126, Coez & Ketama126)',
+    artists: 'Sick Luke, Franco126, Coez, Ketama126',
+    duration: 215016,
+    preview: 'https://p.scdn.co/mp3-preview/28b4571c74f74e932f0545cf8b3369fdfd84350d',
+  },
+  {
+    id: '7g0dmj4mrpVxa6rkm8gqYl',
+    title: 'Si Baciano Tutti (feat. CoCo)',
+    artists: 'Mecna, Sick Luke, CoCo',
+    duration: 170400,
+    preview: 'https://p.scdn.co/mp3-preview/8595078d5862a2b9f3cf44d83d6ebdb073d4d219',
+  },
+]
+
+export const GALLERY = [
+  {
+    src: withBase('/img/feed/studio-1.webp'),
+    video: 'g50mHNBBG5g',
+    ratio: 'portrait',
+    pos: '50% 30%',
+  },
+  {
+    src: withBase('/img/feed/ny-4.webp'),
+    video: '63bTP90PhNw',
+    ratio: 'wide',
+    pos: '50% 42%',
+  },
+  {
+    src: withBase('/img/feed/mayday.webp'),
+    video: 'xhXyAqcqLpk',
+    ratio: 'tall',
+    pos: '50% 50%',
+  },
+  {
+    src: withBase('/img/feed/studio-3.webp'),
+    video: 'g50mHNBBG5g',
+    ratio: 'square',
+    pos: '50% 45%',
+  },
+  {
+    src: withBase('/img/feed/road.webp'),
+    video: 'alz1HHVedSE',
+    ratio: 'portrait',
+    pos: '50% 35%',
+  },
+  {
+    src: withBase('/img/feed/father.webp'),
+    video: 'I_ZMTQ5Aplw',
+    ratio: 'wide',
+    pos: '50% 38%',
+  },
+  {
+    src: withBase('/img/feed/ny-2.webp'),
+    video: '63bTP90PhNw',
+    ratio: 'square',
+    pos: '50% 45%',
+  },
+  {
+    src: withBase('/img/feed/backstage.webp'),
+    video: 'xhXyAqcqLpk',
+    ratio: 'tall',
+    pos: '50% 50%',
+  },
+  {
+    src: withBase('/img/feed/crowd.webp'),
+    video: 'alz1HHVedSE',
+    ratio: 'wide',
+    pos: '50% 40%',
+  },
+  {
+    src: withBase('/img/feed/studio-2.webp'),
+    video: 'g50mHNBBG5g',
+    ratio: 'portrait',
+    pos: '50% 40%',
+  },
+  {
+    src: withBase('/img/feed/ny-3.webp'),
+    video: '63bTP90PhNw',
+    ratio: 'square',
+    pos: '50% 38%',
+  },
+  {
+    src: withBase('/img/feed/ring.webp'),
+    video: 'alz1HHVedSE',
+    ratio: 'wide',
+    pos: '50% 50%',
+  },
+  {
+    src: withBase('/img/feed/beat.webp'),
+    video: 'g50mHNBBG5g',
+    ratio: 'tall',
+    pos: '50% 50%',
+  },
+  {
+    src: withBase('/img/feed/duke.webp'),
+    video: 'I_ZMTQ5Aplw',
+    ratio: 'square',
+    pos: '50% 42%',
+  },
+  {
+    src: withBase('/img/feed/studio-4.webp'),
+    video: 'g50mHNBBG5g',
+    ratio: 'portrait',
+    pos: '50% 35%',
+  },
+  {
+    src: withBase('/img/feed/ny-1.webp'),
+    video: '63bTP90PhNw',
+    ratio: 'wide',
+    pos: '50% 55%',
+  },
+]
+
+export const IG_PROFILE = {
+  handle: '@sicklukex2',
+  url: 'https://www.instagram.com/sicklukex2',
+  avatar: withBase('/img/ig/ig00.webp'),
+  bio: 'BSNM',
+  posts: 300,
+  followers: 826212,
+  following: 441,
+}
+
+export const IG_POSTS = [
+  {
+    src: withBase('/img/ig/ig01.webp'),
+    href: 'https://www.instagram.com/p/DL4uEKwIe6X/',
+    date: '2025-07-09',
+    likes: 142481,
+    caption: 'DOPAMINA, il mio nuovo album, fuori il 5 Settembre.',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig02.webp'),
+    href: 'https://www.instagram.com/p/De_--nWjE3R/',
+    date: '2026-10-27',
+    likes: 34469,
+    caption: 'Nella ultima slide c’è uno spoiler 👀',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig03.webp'),
+    href: 'https://www.instagram.com/p/Dc524zsjLj_/',
+    date: '2026-09-05',
+    likes: 29577,
+    caption: '1 anno di Dopamina. Fare un disco da producer è stato un viaggio incredibile.',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig04.webp'),
+    href: 'https://www.instagram.com/p/DcGXFiFjIe3/',
+    date: '2026-08-16',
+    likes: 53101,
+    caption: 'BELLA VEZ 🐎',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig05.webp'),
+    href: 'https://www.instagram.com/p/DbVc1NrjMUr/',
+    date: '2026-07-28',
+    likes: 49483,
+    caption: 'TRADIZIONI FORTI 🌶️🌶️🌶️🌶️',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig06.webp'),
+    href: 'https://www.instagram.com/p/DfLGV89NhNb/',
+    date: '2026-10-31',
+    likes: 31386,
+    caption: 'SICK DOOM SICK DOOM 🎃',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig07.webp'),
+    href: 'https://www.instagram.com/reel/DcIxal2sBdy/',
+    date: '2026-08-17',
+    likes: 20961,
+    plays: 422723,
+    caption: 'SERPENTI',
+    kind: 'reel',
+  },
+  {
+    src: withBase('/img/ig/ig08.webp'),
+    href: 'https://www.instagram.com/p/DcMLb7JjLtl/',
+    date: '2026-08-18',
+    likes: 52225,
+    caption: '+life +vibes 💫 Grazie a tutti per gli auguri.',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig09.webp'),
+    href: 'https://www.instagram.com/p/DYjzuCijOh6/',
+    date: '2026-05-20',
+    likes: 56696,
+    caption: 'IN TASCA IL 🌎',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig10.webp'),
+    href: 'https://www.instagram.com/reel/Dcvcs97Myx-/',
+    date: '2026-09-01',
+    likes: 25125,
+    plays: 397328,
+    caption: 'FAMILY BUSINESS 🫱🏻‍🫲🏼',
+    kind: 'reel',
+  },
+  {
+    src: withBase('/img/ig/ig11.webp'),
+    href: 'https://www.instagram.com/p/DfHldvCjJfT/',
+    date: '2026-10-30',
+    likes: 13486,
+    caption: 'Il Trentino non cappa 🏔️',
+    kind: 'post',
+  },
+  {
+    src: withBase('/img/ig/ig12.webp'),
+    href: 'https://www.instagram.com/reel/DYPl8NIsqA4/',
+    date: '2026-05-12',
+    likes: 25617,
+    plays: 549955,
+    caption: 'Stop ✋🏼',
+    kind: 'reel',
+  },
+]
+
+export const IG_REELS = [
+  {
+    src: withBase('/img/ig/reel00.webp'),
+    href: 'https://www.instagram.com/reel/Dcvcs97Myx-/',
+    date: '2026-09-01',
+    likes: 25125,
+    plays: 397328,
+    caption: 'FAMILY BUSINESS 🫱🏻‍🫲🏼',
+  },
+  {
+    src: withBase('/img/ig/reel01.webp'),
+    href: 'https://www.instagram.com/reel/DcIxal2sBdy/',
+    date: '2026-08-17',
+    likes: 20961,
+    plays: 422723,
+    caption: 'SERPENTI',
+  },
+  {
+    src: withBase('/img/ig/reel02.webp'),
+    href: 'https://www.instagram.com/reel/DX_mpahMCPQ/',
+    date: '2026-05-06',
+    likes: 18692,
+    plays: 489773,
+  },
+  {
+    src: withBase('/img/ig/reel03.webp'),
+    href: 'https://www.instagram.com/reel/DYAcB8pMQE-/',
+    date: '2026-05-06',
+    likes: 50011,
+    plays: 1045008,
+  },
+  {
+    src: withBase('/img/ig/reel04.webp'),
+    href: 'https://www.instagram.com/reel/DYPl8NIsqA4/',
+    date: '2026-05-12',
+    likes: 25617,
+    plays: 549955,
+    caption: 'Stop ✋🏼',
+  },
+  {
+    src: withBase('/img/ig/reel05.webp'),
+    href: 'https://www.instagram.com/reel/DaiiTA-MHHX/',
+    date: '2026-07-08',
+    likes: 19924,
+    plays: 628867,
+  },
+  {
+    src: withBase('/img/ig/reel06.webp'),
+    href: 'https://www.instagram.com/reel/DfaIFv9setU/',
+    date: '2026-11-06',
+    likes: 10,
+    plays: 162,
+  },
+  {
+    src: withBase('/img/ig/reel07.webp'),
+    href: 'https://www.instagram.com/reel/DfaH-RYsPmV/',
+    date: '2026-11-06',
+    likes: 359,
+    plays: 8245,
+  },
+  {
+    src: withBase('/img/ig/reel08.webp'),
+    href: 'https://www.instagram.com/reel/DfYF7FzMXN3/',
+    date: '2026-11-05',
+    likes: 448,
+    plays: 7624,
+  },
+  {
+    src: withBase('/img/ig/reel09.webp'),
+    href: 'https://www.instagram.com/reel/DfXyEAot_7C/',
+    date: '2026-11-05',
+    likes: 91,
+    plays: 3034,
+  },
+  {
+    src: withBase('/img/ig/reel10.webp'),
+    href: 'https://www.instagram.com/reel/DfXxwrhNIoh/',
+    date: '2026-11-05',
+    likes: 230,
+    plays: 8406,
+  },
+  {
+    src: withBase('/img/ig/reel11.webp'),
+    href: 'https://www.instagram.com/reel/DfKLBoTsFn3/',
+    date: '2026-10-31',
+    likes: 569,
+    plays: 21084,
+  },
+]
+
+export const IG_CASTLE = [
+  {
+    src: withBase('/img/ig/c01.webp'),
+    href: 'https://www.instagram.com/p/Dfc3TRnlT86/',
+    date: '2026-11-07',
+    likes: 1801,
+    caption: 'BBBBRITISH 🇬🇧',
+  },
+  {
+    src: withBase('/img/ig/c02.webp'),
+    href: 'https://www.instagram.com/p/DfaKMtky0tB/',
+    date: '2026-11-06',
+    likes: 955,
+    caption: 'Congelato 🫩😪',
+  },
+  {
+    src: withBase('/img/ig/c03.webp'),
+    href: 'https://www.instagram.com/reel/DfZvJdYR5YX/',
+    date: '2026-11-06',
+    likes: 950,
+    caption: 'Produco ovunque',
+    kind: 'reel',
+  },
+  {
+    src: withBase('/img/ig/c04.webp'),
+    href: 'https://www.instagram.com/p/DfXreGiyyxE/',
+    date: '2026-11-05',
+    likes: 930,
+    caption: 'Back to the origins 🇬🇧',
+  },
+  {
+    src: withBase('/img/ig/c05.webp'),
+    href: 'https://www.instagram.com/p/DfXh-r2RNMe/',
+    date: '2026-11-05',
+    likes: 974,
+    caption: 'I made a promise to myself',
+  },
+  {
+    src: withBase('/img/ig/c06.webp'),
+    href: 'https://www.instagram.com/reel/DfR6FoZx45h/',
+    date: '2026-11-03',
+    likes: 1302,
+    caption: 'Sempre di più nel mood 💆🏻‍♂️',
+    kind: 'reel',
+  },
+  {
+    src: withBase('/img/ig/c07.webp'),
+    href: 'https://www.instagram.com/reel/DfDcC-4xfLG/',
+    date: '2026-10-28',
+    likes: 1138,
+    caption: 'Sto nel mood 🗻',
+    kind: 'reel',
+  },
+  {
+    src: withBase('/img/ig/c08.webp'),
+    href: 'https://www.instagram.com/p/DagbJ86iD9E/',
+    date: '2026-07-07',
+    likes: 862,
+    caption: '🏰⏳🎭🧟‍♂️🌎🔥👀',
+  },
+]
+
+export const IG_CASTLE_URL = 'https://www.instagram.com/castellogrigioscuro'
+
+export const SPOTIFY_ARTIST = 'https://open.spotify.com/artist/0hk4xVujcyOr6USD95wcWb'
+export const YOUTUBE_CHANNEL = 'https://www.youtube.com/channel/UCQloxfKGGx5G1fRLB21PKZw'
+export const INSTAGRAM = 'https://www.instagram.com/sicklukex2'
+export const CASTLE_INSTAGRAM = 'https://www.instagram.com/castellogrigioscuro'
+export const TIKTOK = 'https://www.tiktok.com/@sicklukex2000'
+export const SPOTIFY_ARTIST_IMAGE = withBase('/img/spotify-artist.webp')
+
+export const youtubeUrl = (id) => `https://www.youtube.com/watch?v=${id}`
+export const spotifyTrackUrl = (id) => `https://open.spotify.com/track/${id}`
