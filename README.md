@@ -133,3 +133,18 @@ To publish an update:
 The official domain (`https://www.sickluke.com`) stays the default for
 local builds: `npm run build` without `BASE_PATH` produces a root-hosted
 build, and `VITE_SITE_URL` can override the canonical origin.
+
+## Produzione su sickluke.com
+
+Il sito attuale è un WordPress dietro Cloudflare. Per sostituirlo serve
+accesso al **DNS Cloudflare** (record `www` e apex) e, in alternativa:
+
+- **Cloudflare Pages** (consigliato): caricare `dist/`, collegare
+  `sickluke.com` e `www.sickluke.com` come custom domain, lasciando
+  intatti MX e TXT della posta.
+- **Hosting attuale**: caricare `dist/` nella web root via SFTP/SSH,
+  puntare il server a `index.html` e aggiungere i redirect dei vecchi URL.
+
+L'admin WordPress non serve per pubblicare: serve solo per esportare
+contenuti, media e ordini prima di dismettere il vecchio sito.
+Build di produzione: `VITE_SITE_URL=https://www.sickluke.com npm run build`.
