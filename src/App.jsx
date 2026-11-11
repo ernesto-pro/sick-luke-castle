@@ -50,11 +50,30 @@ export default function App() {
   }, [intro])
 
   const gateLoading = intro === 'loading'
+  const prefetched = useRef(false)
 
   useEffect(() => {
-    // start while the gate is still fading, so the page is already on the
-    // right chapter when the castle is revealed
-    if (gateLoading || deepLinkHandled.current) return undefined
+    // Pull the below-the-fold chunks while the gate is still opening: the
+    // network and parse work happen during the cinematic pause, but the
+    // sections mount only after `done`, so the gate animation stays smooth.
+    if (gateLoading || prefetched.current) return
+    prefetched.current = true
+    const chunks = [
+      import('./components/Discography'),
+      import('./components/Listen'),
+      import('./components/Court'),
+      import('./components/Gallery'),
+      import('./components/Videos'),
+      import('./components/Booking'),
+      import('./components/Footer'),
+      import('./components/CommandPalette'),
+    ]
+    chunks.forEach((chunk) => chunk.catch(() => {}))
+  }, [gateLoading])
+
+  useEffect(() => {
+    // start after the gate is gone, so lazy sections are already in the DOM
+    if (intro !== 'done' || deepLinkHandled.current) return undefined
     const hash = window.location.hash
     if (!hash || hash.length < 2) return undefined
     deepLinkHandled.current = true
@@ -113,7 +132,7 @@ export default function App() {
       window.removeEventListener('keydown', cancel)
       window.removeEventListener('click', cancel)
     }
-  }, [gateLoading])
+  }, [intro])
 
   return (
     <>
@@ -138,9 +157,9 @@ export default function App() {
       <Cursor />
       <BatSwarm variant="site" />
       <Header />
-      {intro !== 'loading' && (
+      {intro === 'done' && (
         <Suspense fallback={null}>
-          <CommandPalette enabled={intro === 'done'} />
+          <CommandPalette enabled />
         </Suspense>
       )}
 
@@ -153,23 +172,27 @@ export default function App() {
 
         <Manifesto />
         <Latest />
-        <Suspense fallback={null}>
-          <Discography />
-          <Listen />
-          <Court />
-          <Gallery />
-          <Videos />
-          <Booking />
-        </Suspense>
+        {intro === 'done' && (
+          <Suspense fallback={null}>
+            <Discography />
+            <Listen />
+            <Court />
+            <Gallery />
+            <Videos />
+            <Booking />
+          </Suspense>
+        )}
       </main>
 
       <div className="ticker ticker--finale" role="region" aria-label={t.finaleLabel}>
         <Marquee items={t.finale} speed={34} reverse />
       </div>
 
-      <Suspense fallback={null}>
-        <Footer />
-      </Suspense>
+      {intro === 'done' && (
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+      )}
       <SoundToggle />
     </>
   )

@@ -476,6 +476,8 @@ const it = {
     city: 'Roma · Londra',
     dedication: 'Per i miei farfastrelli',
     top: 'Torna su',
+    creditLabel: 'Sviluppato da',
+    creditCursor: 'BTRWORKS.IT',
   },
   sound: {
     on: 'Disattiva atmosfera sonora',

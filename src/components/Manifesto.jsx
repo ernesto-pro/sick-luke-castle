@@ -71,7 +71,16 @@ export default function Manifesto() {
             </figure>
 
             <figure className="archive-card" data-cursor="view" data-cursor-label="2018">
-              <img src={withBase('/img/sickluke-press.webp')} alt={m.archiveAlt} width="900" height="647" loading="lazy" decoding="async" />
+              <img
+                src={withBase('/img/sickluke-press.webp')}
+                srcSet={`${withBase('/img/sickluke-press-480.webp')} 480w, ${withBase('/img/sickluke-press.webp')} 900w`}
+                sizes="(max-width: 700px) 44vw, 220px"
+                alt={m.archiveAlt}
+                width="900"
+                height="647"
+                loading="lazy"
+                decoding="async"
+              />
               <figcaption>{m.archiveCap}</figcaption>
             </figure>
 

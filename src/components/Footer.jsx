@@ -69,6 +69,27 @@ export default function Footer() {
             {f.top} <Arrow />
           </a>
         </div>
+
+        <div className="footer-credit">
+          <span className="footer-credit-line" aria-hidden="true" />
+          <a
+            className="footer-credit-link"
+            href="https://btrworks.it"
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="link"
+            data-cursor-label={f.creditCursor}
+          >
+            <span className="footer-credit-label">{f.creditLabel}</span>
+            <span className="footer-credit-brand">
+              BTRWORKS<span>.IT</span>
+            </span>
+            <span className="footer-credit-arrow" aria-hidden="true">
+              <Arrow />
+            </span>
+          </a>
+          <span className="footer-credit-line" aria-hidden="true" />
+        </div>
       </div>
     </footer>
   )

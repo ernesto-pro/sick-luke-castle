@@ -476,6 +476,8 @@ const en = {
     city: 'Rome · London',
     dedication: 'For my farfastrelli',
     top: 'Back to top',
+    creditLabel: 'Developed by',
+    creditCursor: 'BTRWORKS.IT',
   },
   sound: {
     on: 'Turn off ambient sound',

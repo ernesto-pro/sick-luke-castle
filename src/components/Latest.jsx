@@ -79,7 +79,16 @@ export default function Latest() {
           </div>
 
           <figure className="latest-cover" data-cursor="view" data-cursor-label={t.labels.play}>
-            <img src={album.cover} alt={copy.coverAlt} width="900" height="900" loading="lazy" decoding="async" />
+            <img
+              src={album.cover}
+              srcSet={`${album.cover.replace(/\.webp$/, '-720.webp')} 720w, ${album.cover} 900w`}
+              sizes="(max-width: 700px) 82vw, 437px"
+              alt={copy.coverAlt}
+              width="900"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
             <span className="cover-gloss" aria-hidden="true" />
             <span className="cover-badge">{t.discography.new}</span>
           </figure>

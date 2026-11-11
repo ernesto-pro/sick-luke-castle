@@ -32,7 +32,16 @@ function AlbumCard({ album, index, onOpen }) {
         </div>
 
         <div className="album-cover">
-          <img src={album.cover} alt={`${d.coverAlt} ${album.title}`} width="900" height="900" loading="lazy" decoding="async" />
+          <img
+            src={album.cover}
+            srcSet={`${album.cover.replace(/\.webp$/, '-720.webp')} 720w, ${album.cover} 900w`}
+            sizes="(max-width: 620px) 86vw, (max-width: 980px) 44vw, 430px"
+            alt={`${d.coverAlt} ${album.title}`}
+            width="900"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
           {album.isNew && <span className="album-new">{d.new}</span>}
           <span className="album-veil" aria-hidden="true" />
           <span className="album-view" aria-hidden="true">

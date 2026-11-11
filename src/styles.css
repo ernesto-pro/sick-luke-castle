@@ -3599,6 +3599,138 @@ html.has-cursor * {
   transform: rotate(-45deg);
 }
 
+/* colophon — the last line of the castle */
+.footer-credit {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.8vw, 32px);
+  padding: 19px 0 30px;
+}
+
+.footer-credit-line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(236, 229, 216, 0), var(--line-soft));
+}
+
+.footer-credit-line:last-child {
+  background: linear-gradient(90deg, var(--line-soft), rgba(236, 229, 216, 0));
+}
+
+.footer-credit-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+  white-space: nowrap;
+}
+
+.footer-credit-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--blood), rgba(200, 16, 46, 0));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.footer-credit-link:hover::after,
+.footer-credit-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.footer-credit-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dim);
+  transition: color 0.35s;
+}
+
+.footer-credit-brand {
+  font-family: var(--serif);
+  font-size: clamp(1.18rem, 1.7vw, 1.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: var(--bone);
+  transition: text-shadow 0.35s;
+}
+
+.footer-credit-brand span {
+  color: var(--blood-2);
+  font-style: italic;
+  transition: text-shadow 0.35s;
+}
+
+.footer-credit-arrow {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--blood-2);
+  transition: border-color 0.35s, background 0.35s;
+}
+
+.footer-credit-arrow .arrow {
+  width: 9px;
+  height: 9px;
+  transition: transform 0.35s;
+}
+
+.footer-credit-link:hover .footer-credit-label,
+.footer-credit-link:focus-visible .footer-credit-label {
+  color: var(--bone-2);
+}
+
+.footer-credit-link:hover .footer-credit-brand span,
+.footer-credit-link:focus-visible .footer-credit-brand span {
+  text-shadow: 0 0 18px rgba(200, 16, 46, 0.55);
+}
+
+.footer-credit-link:hover .footer-credit-arrow,
+.footer-credit-link:focus-visible .footer-credit-arrow {
+  border-color: rgba(200, 16, 46, 0.55);
+  background: rgba(200, 16, 46, 0.08);
+}
+
+.footer-credit-link:hover .footer-credit-arrow .arrow,
+.footer-credit-link:focus-visible .footer-credit-arrow .arrow {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 700px) {
+  .footer-credit {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 18px 0 26px;
+  }
+
+  .footer-credit-line {
+    display: none;
+  }
+
+  .footer-credit-link {
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+  }
+
+  .footer-credit-arrow {
+    display: none;
+  }
+}
+
 /* ============================================================
    Sound toggle
    ============================================================ */
@@ -6130,8 +6262,9 @@ html.has-cursor * {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 25px;
-  padding: 4px 5px;
+  min-width: 26px;
+  min-height: 24px;
+  padding: 6px;
   font-family: var(--mono);
   font-size: 9px;
   font-weight: 500;

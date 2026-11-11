@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07060a" />
+    <meta name="robots" content="noindex" />
+    <title>404 — Sick Luke</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+        background: radial-gradient(circle at 50% 40%, #120b12 0%, #07060a 55%, #030206 100%);
+        color: #ece5d8;
+        font-family: Georgia, "Times New Roman", serif;
+        text-align: center;
+      }
+      main { max-width: 620px; }
+      .mark {
+        width: 46px;
+        height: 46px;
+        margin: 0 auto 26px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(236, 229, 216, 0.22);
+        color: #c8102e;
+        font: 700 16px/1 ui-monospace, monospace;
+        letter-spacing: 0.08em;
+      }
+      .code {
+        margin: 0;
+        font-size: clamp(5rem, 18vw, 10rem);
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: -0.06em;
+      }
+      .code span {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(236, 229, 216, 0.5);
+      }
+      p {
+        margin: 24px 0 0;
+        font: 500 11px/1.7 ui-monospace, SFMono-Regular, monospace;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #8d8794;
+      }
+      em { color: #c8102e; font-style: normal; }
+      .links {
+        margin-top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border: 1px solid rgba(236, 229, 216, 0.22);
+        color: #ece5d8;
+        font: 600 10px/1 ui-monospace, monospace;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: border-color 0.25s, color 0.25s, background 0.25s;
+      }
+      a:hover, a:focus-visible {
+        border-color: #c8102e;
+        background: rgba(200, 16, 46, 0.1);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true">X2</div>
+      <h1 class="code">4<span>0</span>4</h1>
+      <p>Questa stanza non esiste. <em>/</em> This room doesn't exist.</p>
+      <div class="links">
+        <a href="/">Torna al castello →</a>
+        <a href="/en/">Enter the castle →</a>
+      </div>
+    </main>
+  </body>
+</html>
