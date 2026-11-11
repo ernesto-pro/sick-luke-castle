@@ -125,3 +125,27 @@ I dati neutri (titoli, tracklist, URL, date, copertine, ID video, didascalie del
 ## Nota
 
 I contenuti musicali e le immagini appartengono ai rispettivi titolari. Il muro "farfastrelli" combina frame dietro le quinte tratti dai video ufficiali YouTube e scatti pubblici dei profili Instagram `@sicklukex2` e `@castellogrigioscuro`, etichettati in didascalia. Le anteprime audio arrivano dal player embed pubblico di Spotify.
+
+---
+
+## Publish (GitHub Pages)
+
+The public preview lives at:
+
+- IT — https://ernesto-pro.github.io/sick-luke-castle/
+- EN — https://ernesto-pro.github.io/sick-luke-castle/en/
+
+It is a project page, so the build runs with `BASE_PATH=/sick-luke-castle/`
+and `VITE_SITE_URL=https://ernesto-pro.github.io/sick-luke-castle`.
+The production build in `dist/` is published to the `gh-pages` branch
+(root), which GitHub Pages serves.
+
+To publish an update:
+
+```bash
+./scripts/deploy-pages.sh
+```
+
+The official domain (`https://www.sickluke.com`) stays the default for
+local builds: `npm run build` without `BASE_PATH` produces a root-hosted
+build, and `VITE_SITE_URL` can override the canonical origin.
