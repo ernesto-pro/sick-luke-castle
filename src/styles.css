@@ -6262,9 +6262,9 @@ html.has-cursor * {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
-  min-height: 24px;
-  padding: 6px;
+  min-width: 28px;
+  min-height: 26px;
+  padding: 6px 7px;
   font-family: var(--mono);
   font-size: 9px;
   font-weight: 500;
@@ -6314,8 +6314,9 @@ html.has-cursor * {
 
 @media (max-width: 700px) {
   .lang-switch a {
-    min-width: 22px;
-    padding: 4px;
+    min-width: 30px;
+    min-height: 28px;
+    padding: 7px 9px;
     font-size: 9px;
   }
 
@@ -13798,13 +13799,13 @@ button {
 
 /* deep links render every skipped grid before scrolling, so the hash jump
    lands on the final layout instead of measuring a placeholder */
-html[data-jump] {
+.site-jump {
   scroll-behavior: auto;
 }
 
-html[data-jump] .albums,
-html[data-jump] .gallery-wall,
-html[data-jump] .video-mosaic {
+.site-jump .albums,
+.site-jump .gallery-wall,
+.site-jump .video-mosaic {
   content-visibility: visible;
 }
 

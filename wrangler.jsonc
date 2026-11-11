@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sickluke",
+  "compatibility_date": "2026-11-11",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "www.sickluke.com/*", "zone_id": "24c4ce192f97c487ba15ccb77754c394" }
+  ],
+  "preview_urls": false,
+  "observability": {
+    "enabled": true
+  }
+}

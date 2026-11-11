@@ -16,6 +16,7 @@ export default {
               /^gallery-item-wrap--/,
               /^bat-plane--/,
               /^bat-swarm--/,
+              /site-jump/,
             ],
           },
         }),

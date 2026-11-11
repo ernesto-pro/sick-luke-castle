@@ -136,15 +136,31 @@ build, and `VITE_SITE_URL` can override the canonical origin.
 
 ## Produzione su sickluke.com
 
-Il sito attuale è un WordPress dietro Cloudflare. Per sostituirlo serve
-accesso al **DNS Cloudflare** (record `www` e apex) e, in alternativa:
+Il sito ufficiale non è più WordPress: `https://www.sickluke.com` è servito
+da **Cloudflare Workers con static assets** (account Cloudflare
+`Buytrondigital@gmail.com`, zona `sickluke.com`). Il vecchio WordPress
+resta solo sul server d'origine e non riceve più traffico dal dominio.
 
-- **Cloudflare Pages** (consigliato): caricare `dist/`, collegare
-  `sickluke.com` e `www.sickluke.com` come custom domain, lasciando
-  intatti MX e TXT della posta.
-- **Hosting attuale**: caricare `dist/` nella web root via SFTP/SSH,
-  puntare il server a `index.html` e aggiungere i redirect dei vecchi URL.
+- Worker `sickluke` — asset statici in `dist/`, route `www.sickluke.com/*`
+- Worker `sickluke-apex` — `sickluke.com/*` → 301 verso `www`
+- `_headers` e `_redirects` vengono letti da Cloudflare: cache immutabile
+  su `/assets` e `/fonts`, security header su tutto, redirect 301 dei
+  vecchi URL WordPress (shop incluso, verso `sicklukemerch.com`).
 
-L'admin WordPress non serve per pubblicare: serve solo per esportare
-contenuti, media e ordini prima di dismettere il vecchio sito.
-Build di produzione: `VITE_SITE_URL=https://www.sickluke.com npm run build`.
+Per pubblicare:
+
+```bash
+./scripts/deploy-cloudflare.sh
+```
+
+Il comando builda con `VITE_SITE_URL=https://www.sickluke.com`, carica gli
+asset sul worker `sickluke` e riallinea il redirect dell'apex.
+
+Rollback immediato: eliminare le due route dalla zona (`Workers → Routes`);
+il DNS, che punta ancora al vecchio server, riprende a servire WordPress.
+Nessuna modifica è stata fatta a MX, SPF, DKIM o TXT: la posta non è
+toccata.
+
+Prima di dismettere il server d'origine conviene esportare media, ordini e
+contenuti WordPress e verificare che non ci siano altri servizi
+(`ftp.sickluke.com`) ancora appesi a quell'IP.

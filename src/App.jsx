@@ -86,7 +86,7 @@ export default function App() {
     let cancelled = false
     // skipped grids are materialised before the first jump: the hash lands on
     // the final layout instead of a placeholder height.
-    root.dataset.jump = '1'
+    root.classList.add('site-jump')
     // deep links can target lazy sections: keep correcting the position until
     // the layout above the target has settled, then stop as soon as it is stable
     const scrollToTarget = () => {
@@ -109,7 +109,7 @@ export default function App() {
       }
       settleTries += 1
       if ((stableTries >= 2 && settleTries >= 4) || settleTries >= 12) {
-        delete root.dataset.jump
+        root.classList.remove('site-jump')
         return
       }
       timer = window.setTimeout(scrollToTarget, settleTries < 4 ? 90 : 170)
@@ -118,7 +118,7 @@ export default function App() {
     const cancel = () => {
       cancelled = true
       window.clearTimeout(timer)
-      delete root.dataset.jump
+      root.classList.remove('site-jump')
     }
     window.addEventListener('wheel', cancel, { passive: true })
     window.addEventListener('touchstart', cancel, { passive: true })

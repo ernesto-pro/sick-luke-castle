@@ -1,0 +1,14 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "sickluke-apex",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-11",
+  "routes": [
+    { "pattern": "sickluke.com/*", "zone_id": "24c4ce192f97c487ba15ccb77754c394" }
+  ],
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true
+  }
+}

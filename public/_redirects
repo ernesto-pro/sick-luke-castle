@@ -1,0 +1,64 @@
+# Legacy WordPress → new castle
+# 301s for the old Yoast sitemap. Shop lives at sicklukemerch.com.
+
+# home / landing variants
+/ex-home/            /                       301
+/ex-home             /                       301
+/exit/               /                       301
+/404/                /                       301
+/blog/               /                       301
+/blog/*              /                       301
+/page/*              /                       301
+
+# discography
+/music/              /#opere                 301
+/music               /#opere                 301
+/album/              /#opere                 301
+/album/*             /#opere                 301
+/artist/             /#opere                 301
+/artist/*            /#opere                 301
+
+# listening / spotify
+/album/zingarello-ghali-sick-luke/        /#ascolto   301
+/album/brokenheart/                       /#ascolto   301
+/album/smoking-with-my-demons/            /#ascolto   301
+
+# videos / social
+/music/video/        /#visioni               301
+/video-archivio/     /#visioni               301
+/videos_grid/        /#visioni               301
+/video-category/*    /#visioni               301
+/instagram/          /#visioni               301
+/vlog/               /#vlog                  301
+
+# events
+/event/              /#tour                  301
+/event/*             /#tour                  301
+/events/             /#tour                  301
+/events/*            /#tour                  301
+
+# about / contact
+/biografia/          /#conte                 301
+/contact/            /#invito                301
+/work-with-us/       /#invito                301
+
+# shop – WooCommerce moved to the merch store
+/shop/               https://sicklukemerch.com/   301
+/shop                https://sicklukemerch.com/   301
+/cart/               https://sicklukemerch.com/   301
+/checkout/           https://sicklukemerch.com/   301
+/my-account/         https://sicklukemerch.com/   301
+/product/*           https://sicklukemerch.com/   301
+/categoria-prodotto/*  https://sicklukemerch.com/ 301
+/product-tag/*       https://sicklukemerch.com/   301
+
+# WordPress plumbing
+/wp-login.php        /   301
+/wp-admin/           /   301
+/wp-admin/*          /   301
+/wp-content/*        /   301
+/wp-includes/*       /   301
+/xmlrpc.php          /   301
+/feed/               /   301
+/feed                /   301
+/commenti/feed/      /   301
