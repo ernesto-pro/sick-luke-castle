@@ -158,7 +158,7 @@ export const ALBUMS = [
     cert: '3× Platino',
     cover: withBase('/img/x2.webp'),
     spotify: 'https://open.spotify.com/album/6ZVOpNfX2JMfAFDqEfmyQ5',
-    apple: 'https://music.apple.com/it/album/x2/1598545064',
+    apple: 'https://music.apple.com/it/search?term=X2%20Sick%20Luke',
     tracks: [
       'Notte scura (feat. Gazzelle & Tedua)',
       'Creatur (feat. Geolier & Ernia)',

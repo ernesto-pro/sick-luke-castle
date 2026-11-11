@@ -3366,9 +3366,9 @@ html.has-cursor * {
 
 .social-index {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.2em;
-  color: var(--blood);
+  color: var(--blood-2);
 }
 
 .social-label {
@@ -11239,7 +11239,7 @@ html[data-pact-panel='open'] .ritual-toasts {
 }
 
 .social-index {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .social-handle {

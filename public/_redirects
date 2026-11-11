@@ -24,6 +24,8 @@
 /album/smoking-with-my-demons/            /#ascolto   301
 
 # videos / social
+/videos/             /#visioni               301
+/videos/*            /#visioni               301
 /music/video/        /#visioni               301
 /video-archivio/     /#visioni               301
 /videos_grid/        /#visioni               301
@@ -49,6 +51,14 @@
 /checkout/           https://sicklukemerch.com/   301
 /my-account/         https://sicklukemerch.com/   301
 /product/*           https://sicklukemerch.com/   301
+/prodotto/           https://sicklukemerch.com/   301
+/prodotto/*          https://sicklukemerch.com/   301
+/tag-prodotto/       https://sicklukemerch.com/   301
+/tag-prodotto/*      https://sicklukemerch.com/   301
+/negozio/            https://sicklukemerch.com/   301
+/carrello/           https://sicklukemerch.com/   301
+/cassa/              https://sicklukemerch.com/   301
+/mio-account/        https://sicklukemerch.com/   301
 /categoria-prodotto/*  https://sicklukemerch.com/ 301
 /product-tag/*       https://sicklukemerch.com/   301
 
