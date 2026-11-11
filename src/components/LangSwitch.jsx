@@ -1,9 +1,7 @@
 import { LANG_CODES, useI18n } from '../i18n'
-import { useRitual } from '../ritual'
 
 export default function LangSwitch({ className = '' }) {
   const { lang, t, hrefFor } = useI18n()
-  const { grant } = useRitual()
 
   return (
     <div className={`lang-switch ${className}`.trim()} role="group" aria-label={t.header.langSwitch}>
@@ -18,11 +16,7 @@ export default function LangSwitch({ className = '' }) {
             className={current ? 'is-active' : ''}
             aria-current={current ? 'true' : undefined}
             onClick={(event) => {
-              if (current) {
-                event.preventDefault()
-                return
-              }
-              grant('lingua')
+              if (current) event.preventDefault()
             }}
           >
             <span aria-hidden="true">{code.toUpperCase()}</span>

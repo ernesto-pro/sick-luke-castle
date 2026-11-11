@@ -6,8 +6,8 @@ import {
   spotifyTrackUrl,
 } from '../data'
 import { useI18n } from '../i18n'
-import { useRitual } from '../ritual'
 import { Arrow, MagneticLink, Reveal, SectionLabel } from './ui'
+import SpotifyEmbed from './SpotifyEmbed'
 
 function fmt(ms) {
   if (!Number.isFinite(ms) || ms <= 0) return '0:00'
@@ -30,7 +30,6 @@ function PlayIcon({ playing }) {
 
 export default function Listen() {
   const { t } = useI18n()
-  const { grant } = useRitual()
   const l = t.listen
   const audioRef = useRef(null)
   const [active, setActive] = useState(null)
@@ -50,7 +49,6 @@ export default function Listen() {
       if (audio.paused) {
         audio
           .play()
-          .then(() => grant('battito'))
           .catch(() => setError(true))
       } else {
         audio.pause()
@@ -65,7 +63,6 @@ export default function Listen() {
     audio.currentTime = 0
     audio
       .play()
-      .then(() => grant('battito'))
       .catch(() => setError(true))
   }
 
@@ -149,6 +146,10 @@ export default function Listen() {
               {l.quoteA} <em>{l.quoteB}</em>
               <span aria-hidden="true">”</span>
             </blockquote>
+
+            <Reveal className="listen-spotify" delay={220}>
+              <SpotifyEmbed title={l.spotifyTitle} note={l.spotifyNote} />
+            </Reveal>
           </div>
 
           <Reveal className="listen-panel" delay={80}>

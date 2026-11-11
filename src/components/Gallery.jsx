@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { GALLERY, INSTAGRAM, CASTLE_INSTAGRAM, youtubeUrl } from '../data'
 import { useI18n } from '../i18n'
-import { useRitual } from '../ritual'
 import { useEscape, useLockBody } from '../lib/hooks'
 import { Arrow, MagneticLink, Reveal, SectionLabel } from './ui'
 import Necklace from './Necklace'
@@ -67,11 +66,9 @@ function GalleryModal({ index, onClose, onPrev, onNext }) {
 export default function Gallery() {
   const [selected, setSelected] = useState(null)
   const { t } = useI18n()
-  const { grant } = useRitual()
   const g = t.gallery
 
   const openGallery = (index) => {
-    grant('ali')
     setSelected(index)
   }
 

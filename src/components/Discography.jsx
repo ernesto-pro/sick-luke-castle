@@ -9,7 +9,6 @@ import {
   trackFeatures,
 } from '../data'
 import { useI18n } from '../i18n'
-import { useRitual } from '../ritual'
 import { useEscape, useLockBody, useTilt } from '../lib/hooks'
 import { Arrow, Reveal, Rich, SectionLabel } from './ui'
 
@@ -375,14 +374,12 @@ export default function Discography() {
   const [filter, setFilter] = useState('all')
   const [indexOpen, setIndexOpen] = useState(false)
   const { t } = useI18n()
-  const { grant } = useRitual()
   const d = t.discography
 
   const filtered = filter === 'all' ? ALBUMS : ALBUMS.filter((album) => album.type === filter)
   const countFor = (kind) => (kind === 'all' ? ALBUMS.length : ALBUMS.filter((album) => album.type === kind).length)
 
   const openAlbum = (album) => {
-    grant('grimorio')
     setSelected(album)
   }
 
@@ -390,13 +387,12 @@ export default function Discography() {
     const onOpenAlbum = (event) => {
       const album = ALBUMS.find((item) => item.id === event.detail?.id)
       if (album) {
-        grant('grimorio')
         setSelected(album)
       }
     }
     window.addEventListener('sl:open-album', onOpenAlbum)
     return () => window.removeEventListener('sl:open-album', onOpenAlbum)
-  }, [grant])
+  }, [])
 
   return (
     <section id="opere" className="section discography">

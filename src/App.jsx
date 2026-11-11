@@ -8,6 +8,7 @@ import Hero from './components/Hero'
 import Manifesto from './components/Manifesto'
 import Latest from './components/Latest'
 import SoundToggle from './components/SoundToggle'
+import BatSwarm from './components/BatSwarm'
 
 // Below-the-fold sections ship as separate chunks: the first paint only
 // parses the hero, the gate and the opening chapters. Body scroll is locked
@@ -19,12 +20,10 @@ const Gallery = lazy(() => import('./components/Gallery'))
 const Videos = lazy(() => import('./components/Videos'))
 const Booking = lazy(() => import('./components/Booking'))
 const Footer = lazy(() => import('./components/Footer'))
-const RitualDock = lazy(() => import('./components/RitualDock'))
 // search is a shortcut, not first paint: the palette and the 34 kB video
 // archive it indexes load once the gate starts opening.
 const CommandPalette = lazy(() => import('./components/CommandPalette'))
 import { Marquee } from './components/ui'
-import { useRitual } from './ritual'
 
 const hasEntered = () => {
   try {
@@ -36,7 +35,6 @@ const hasEntered = () => {
 
 export default function App() {
   const { t } = useI18n()
-  const { welcome } = useRitual()
   const [intro, setIntro] = useState(() => (hasEntered() ? 'done' : 'loading'))
   const deepLinkHandled = useRef(false)
   useLockBody(intro !== 'done')
@@ -49,8 +47,7 @@ export default function App() {
     } catch {
       /* noop */
     }
-    welcome()
-  }, [intro, welcome])
+  }, [intro])
 
   const gateLoading = intro === 'loading'
 
@@ -139,6 +136,7 @@ export default function App() {
         <span className="scene-rule scene-rule--bottom" />
       </div>
       <Cursor />
+      <BatSwarm variant="site" />
       <Header />
       {intro !== 'loading' && (
         <Suspense fallback={null}>
@@ -171,7 +169,6 @@ export default function App() {
 
       <Suspense fallback={null}>
         <Footer />
-        <RitualDock />
       </Suspense>
       <SoundToggle />
     </>

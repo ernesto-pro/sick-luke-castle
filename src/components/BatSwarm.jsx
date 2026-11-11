@@ -34,6 +34,16 @@ const NEAR = [
   { y: 27, w: 34, z: 0, dur: 34, delay: -18, drift: -24, op: 0.55, tone: 'gold', rot: 6 },
 ]
 
+/* stormo globale: vola sopra tutte le stanze del sito */
+const SITE = [
+  { y: 12, w: 34, z: -140, dur: 62, delay: -16, drift: 30, op: 0.26, tone: 'blood', rot: -4 },
+  { y: 24, w: 24, z: -200, dur: 74, delay: -41, drift: -26, op: 0.2, tone: 'gold', rot: 3 },
+  { y: 38, w: 30, z: -120, dur: 56, delay: -6, drift: 34, op: 0.28, tone: 'blood', rot: -2 },
+  { y: 52, w: 20, z: -230, dur: 84, delay: -58, drift: 18, op: 0.16, tone: 'gold', rot: 5 },
+  { y: 66, w: 28, z: -160, dur: 68, delay: -29, drift: -30, op: 0.22, tone: 'blood', rot: 2 },
+  { y: 80, w: 22, z: -210, dur: 78, delay: -49, drift: 22, op: 0.18, tone: 'gold', rot: -3 },
+]
+
 const SECTION = [
   { y: 8, w: 26, z: -120, dur: 48, delay: -11, drift: 24, op: 0.26, tone: 'blood', rot: -3 },
   { y: 20, w: 20, z: -180, dur: 56, delay: -30, drift: -20, op: 0.2, tone: 'gold', rot: 4 },
@@ -73,7 +83,8 @@ function Bat({ bat, index }) {
 
 export default function BatSwarm({ variant = 'far', className = '' }) {
   const ref = useRef(null)
-  const bats = variant === 'near' ? NEAR : variant === 'section' ? SECTION : FAR
+  const bats =
+    variant === 'near' ? NEAR : variant === 'section' ? SECTION : variant === 'site' ? SITE : FAR
 
   useEffect(() => {
     const el = ref.current

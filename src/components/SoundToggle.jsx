@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { useI18n } from '../i18n'
-import { useRitual } from '../ritual'
 
 export default function SoundToggle() {
   const { t } = useI18n()
-  const { grant } = useRitual()
   const [on, setOn] = useState(false)
   const audio = useRef(null)
 
@@ -121,7 +119,6 @@ export default function SoundToggle() {
       node.master.gain.linearRampToValueAtTime(0.085, now + 2.2)
       node.ctx.resume().catch(() => {})
       setOn(true)
-      grant('eco')
     } else {
       const node = audio.current
       if (node) {

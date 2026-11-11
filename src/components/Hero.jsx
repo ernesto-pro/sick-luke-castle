@@ -128,7 +128,7 @@ export default function Hero({ live, active = true }) {
             </div>
           </div>
 
-          <figure className="hero-arch" data-cursor="view" data-cursor-label={t.labels.portrait}>
+          <figure className="hero-arch">
             <div className="arch-frame">
               <img
                 src={withBase('/img/sickluke-portrait.webp')}
@@ -156,16 +156,6 @@ export default function Hero({ live, active = true }) {
               </svg>
               <X2Mark />
             </div>
-            <span className="hero-plate" aria-hidden="true">
-              <em>{t.hero.plateA}</em>
-              <strong>{t.hero.plateB}</strong>
-            </span>
-            <span className="hero-hangtag" aria-hidden="true">
-              <span className="hero-hangtag-hole" />
-              <strong>NEW DROP</strong>
-              <em>CASTELLO / MMXXVI</em>
-              <span className="hero-hangtag-bars" />
-            </span>
           </figure>
         </div>
 

@@ -319,7 +319,6 @@ export default function CommandPalette({ enabled = true }) {
       })
 
     const a = t.palette.actions
-    action('pact', a.pact, a.pactHint, 'patto pact ritual sigilli seals cripta crypt')
     action('sound', a.sound, a.soundHint, 'audio drone atmosfera ambience sound')
     action('lang', a.lang, a.langHint, `${otherLang} english italiano language lingua`)
     action('copy', a.copy, a.copyHint, 'link share condividi copia url')
@@ -512,9 +511,7 @@ export default function CommandPalette({ enabled = true }) {
       return
     }
     close()
-    if (key === 'pact') {
-      window.dispatchEvent(new CustomEvent('sl:open-pact'))
-    } else if (key === 'sound') {
+    if (key === 'sound') {
       window.dispatchEvent(new CustomEvent('sl:toggle-sound'))
     } else if (key === 'lang') {
       window.location.assign(hrefFor(otherLang))

@@ -1,6 +1,5 @@
 import { NAV, SOCIALS } from '../data'
 import { useI18n } from '../i18n'
-import { TOTAL_SEALS, useRitual } from '../ritual'
 import { Arrow } from './ui'
 import X2Mark from './X2Mark'
 import LangSwitch from './LangSwitch'
@@ -8,7 +7,6 @@ import LangSwitch from './LangSwitch'
 export default function Footer() {
   const year = new Date().getFullYear()
   const { t } = useI18n()
-  const { seals, setOpen } = useRitual()
   const f = t.footer
 
   return (
@@ -66,18 +64,6 @@ export default function Footer() {
           <span>© MMXXVI SICK LUKE — {year}</span>
           <span className="footer-mid">{f.city}</span>
           <span>{f.dedication}</span>
-          <button
-            type="button"
-            className="footer-pact"
-            onClick={() => setOpen(true)}
-          >
-            <X2Mark />
-            <span className="sr-only">{t.ritual.openPact}</span>
-            <span>{t.ritual.dockKicker}</span>
-            <em>
-              {String(seals.length).padStart(2, '0')} / {String(TOTAL_SEALS).padStart(2, '0')}
-            </em>
-          </button>
           <LangSwitch className="lang-switch--footer" />
           <a href="#top" className="to-top" data-cursor="link" data-cursor-label={t.labels.up}>
             {f.top} <Arrow />

@@ -8,7 +8,6 @@ import {
 } from '../data'
 import { VIDEOS, VIDEO_YEARS, VLOGS, VLOG_YEARS } from '../videos'
 import { useI18n } from '../i18n'
-import { useRitual } from '../ritual'
 import { useEscape, useLockBody } from '../lib/hooks'
 import { Arrow, Reveal, Rich, SectionLabel } from './ui'
 import { withBase } from '../lib/base'
@@ -258,7 +257,6 @@ export default function Videos() {
   const [visible, setVisible] = useState(PAGE)
   const [active, setActive] = useState(null)
   const { t } = useI18n()
-  const { grant } = useRitual()
   const v = t.videos
 
   const results = useMemo(() => {
@@ -279,7 +277,6 @@ export default function Videos() {
   }, [filter, year, query])
 
   const openVideo = (video) => {
-    grant('occhio')
     setActive(video)
   }
 
@@ -292,12 +289,11 @@ export default function Videos() {
     const onOpenVideo = (event) => {
       const video = VIDEOS.find((item) => item.id === event.detail?.id)
       if (!video) return
-      grant('occhio')
       setActive(video)
     }
     window.addEventListener('sl:open-video', onOpenVideo)
     return () => window.removeEventListener('sl:open-video', onOpenVideo)
-  }, [grant])
+  }, [])
 
   return (
     <section id="visioni" className="section videos">
