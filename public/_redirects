@@ -62,6 +62,17 @@
 /categoria-prodotto/*  https://sicklukemerch.com/ 301
 /product-tag/*       https://sicklukemerch.com/   301
 
+# section pretty links
+/opere               /#opere                 301
+/ascolto             /#ascolto               301
+/conte               /#conte                 301
+/corte               /#corte                 301
+/farfastrelli        /#farfastrelli          301
+/visioni             /#visioni               301
+/invito              /#invito                301
+/tour                /#tour                  301
+/vlog                /#vlog                  301
+
 # WordPress plumbing
 /wp-login.php        /   301
 /wp-admin/           /   301
